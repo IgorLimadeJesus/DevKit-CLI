@@ -4,7 +4,7 @@ Configure seu ambiente de desenvolvimento em um único comando.
 
 ```bash
 npm install -g @igorlimadejesus/devkitcli
-DevKit
+devkit
 ```
 
 ---
@@ -26,7 +26,7 @@ npm install -g @igorlimadejesus/devkitcli
 ## Uso
 
 ```bash
-DevKit
+devkit
 ```
 
 ### Comandos
@@ -44,15 +44,15 @@ DevKit
 
 ```bash
 # Wizard completo
-DevKit setup
+devkit setup
 
 # Instalar uma ferramenta
-DevKit install git
-DevKit install docker
+devkit install git
+devkit install docker
 
 # Instalar por perfil
-DevKit install --profile backend
-DevKit install --profile frontend
+devkit install --profile backend
+devkit install --profile frontend
 ```
 
 ## Ferramentas suportadas
