@@ -17,5 +17,7 @@ dist/
 
 # npm
 installer/node_modules/
+installer/.npmrc
 installer/bin/devkit-bin
 installer/bin/devkit-bin.exe
+

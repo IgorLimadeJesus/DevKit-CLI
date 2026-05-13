@@ -54,7 +54,6 @@ public class InstallService
             return;
         }
 
-        // Verifica se há suporte na plataforma atual
         if (PackageManagerService.GetPackageId(tool) is null)
         {
             Console.WriteLine($"[{tool.Name}] {tool.DisplayName} – não disponível no {PackageManagerService.PlatformName}, pulando.");

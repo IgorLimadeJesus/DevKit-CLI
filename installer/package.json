@@ -1,6 +1,6 @@
 {
-    "name": "devkit-cli",
-    "version": "1.0.0",
+    "name": "@igorlimadejesus/devkitcli",
+    "version": "1.2.2",
     "description": "DevKit – configure seu ambiente de desenvolvimento em um comando",
     "bin": {
         "DevKit": "./bin/devkit",

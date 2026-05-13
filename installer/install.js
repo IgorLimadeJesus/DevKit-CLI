@@ -3,11 +3,12 @@ const fs = require("fs");
 const path = require("path");
 const { execSync } = require("child_process");
 
-const GITHUB_USER = "SEU_USUARIO";
-const GITHUB_REPO = "DevKit";
+const GITHUB_USER = "IgorLimadeJesus";
+const GITHUB_REPO = "DevKit-CLI";
+const RELEASE_VERSION = "1.2.0";
 
 const pkg = require("./package.json");
-const version = pkg.version;
+const version = RELEASE_VERSION;
 
 function getPlatformAsset() {
     const { platform, arch } = process;

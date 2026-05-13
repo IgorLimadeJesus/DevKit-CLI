@@ -4,7 +4,6 @@ public class SetupService(InstallService installService)
 {
     private readonly InstallService _installService = installService;
 
-    // ── Ponto de entrada: comando `setup` ─────────────────────────────────────
     public void RunWizard()
     {
         PrintHeader("DevKit – Wizard de configuração");
@@ -17,7 +16,6 @@ public class SetupService(InstallService installService)
         ConfirmAndInstall(tools, "Setup concluído!");
     }
 
-    // ── Ponto de entrada: comando `install --profile <perfil>` ────────────────
     public void RunProfileWizard(string profile)
     {
         switch (profile.ToLower())
@@ -66,7 +64,6 @@ public class SetupService(InstallService installService)
         }
     }
 
-    // ── Blocos de perguntas ───────────────────────────────────────────────────
 
     private static void AskBackend(HashSet<string> tools)
     {
@@ -86,7 +83,7 @@ public class SetupService(InstallService installService)
             ToolRegistry.FrontendStacks.Select(s => s.Label).ToArray(),
             allowSkip: false
         );
-        // índice da última opção ("Nenhum") não adiciona nada
+
         foreach (var t in ToolRegistry.FrontendStacks[idx].Tools)
             tools.Add(t);
     }
@@ -107,7 +104,7 @@ public class SetupService(InstallService installService)
         if (AskYesNo($"Deseja instalar o {db.Key} localmente nesta máquina?"))
         {
             tools.Add(db.ToolName);
-            tools.Add("dbeaver"); // GUI para gerenciar o banco
+            tools.Add("dbeaver");
         }
         else
         {
@@ -148,8 +145,6 @@ public class SetupService(InstallService installService)
         Console.WriteLine("Reinicie o terminal para aplicar as mudanças.");
         Console.WriteLine();
     }
-
-    // ── Helpers de I/O ───────────────────────────────────────────────────────
 
     private static void PrintHeader(string title)
     {
