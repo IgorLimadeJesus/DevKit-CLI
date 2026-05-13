@@ -1,0 +1,27 @@
+{
+    "name": "devkit-cli",
+    "version": "1.0.0",
+    "description": "DevKit – configure seu ambiente de desenvolvimento em um comando",
+    "bin": {
+        "DevKit": "./bin/devkit",
+        "devkit": "./bin/devkit"
+    },
+    "scripts": {
+        "postinstall": "node install.js"
+    },
+    "engines": {
+        "node": ">=18"
+    },
+    "os": [
+        "win32",
+        "darwin",
+        "linux"
+    ],
+    "keywords": [
+        "devkit",
+        "developer",
+        "setup",
+        "cli"
+    ],
+    "license": "MIT"
+}

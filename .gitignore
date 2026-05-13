@@ -1,0 +1,21 @@
+# .NET build outputs
+bin/
+obj/
+dist/
+
+# Visual Studio
+*.user
+*.suo
+.vs/
+*.vsidx
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# npm
+installer/node_modules/
+installer/bin/devkit-bin
+installer/bin/devkit-bin.exe
